@@ -13,10 +13,10 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
+        {projects.map((item, i) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-            key={item.id}
+            key={item?.id || i}
           >
             <PinContainer
               title="/ui.aceternity.com"
@@ -30,14 +30,14 @@ const RecentProjects = () => {
                   <img src="/bg.png" alt="bgimg" />
                 </div>
                 <img
-                  src={item.img}
+                  src={item?.img}
                   alt="cover"
                   className="z-10 absolute bottom-0"
                 />
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
+                {item?.title}
               </h1>
 
               <p
@@ -47,12 +47,12 @@ const RecentProjects = () => {
                   margin: "1vh 0",
                 }}
               >
-                {item.des}
+                {item?.des}
               </p>
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
+                  {item?.iconLists.map((icon, index) => (
                     <div
                       key={index}
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
