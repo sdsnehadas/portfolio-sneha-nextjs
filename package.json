@@ -44,5 +44,25 @@
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
-  }
+  },
+  "description": "Sneha's portfolio NextJS",
+  "main": "firebase.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdsnehadas/portfolio-sneha-nextjs.git"
+  },
+  "keywords": [
+    "Sneha",
+    "portfolio",
+    "NextJS"
+  ],
+  "author": "Sneha Das",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdsnehadas/portfolio-sneha-nextjs/issues"
+  },
+  "homepage": "https://github.com/sdsnehadas/portfolio-sneha-nextjs#readme"
 }
