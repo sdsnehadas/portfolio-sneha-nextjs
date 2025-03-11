@@ -1,9 +1,12 @@
 import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
-  basePath: "/portfolio",
-  output: "export",
-  reactStrictMode: true,
+  output: "export", // Enables static export
+  basePath: isProd ? "/portfolio-sneha-nextjs" : "", // Replace 'my-next-app' with your repository name
+  assetPrefix: isProd ? "/portfolio-sneha-nextjs/" : "", // Replace 'my-next-app' with your repository name
 };
 
 export default withSentryConfig(nextConfig, {
